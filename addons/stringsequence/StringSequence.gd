@@ -1,7 +1,11 @@
 class_name StringSequence
 extends Node
 
-@export var string := ""
+@export var string := "" :
+	set(new):
+		_current_sequence = ""
+		string = new
+
 var _current_sequence := ""
 
 signal sequence_matched(what: String)
